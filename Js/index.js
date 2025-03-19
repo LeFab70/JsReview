@@ -63,7 +63,13 @@ for (const word of words) {
 for (const key in frequency) {
   frequenciesArray.push({ word: key, frequency: frequency[key] });
 }
-frequenciesArray.forEach((word) => console.info(word));
+frequenciesArray
+  .sort((a, b) => b.frequency - a.frequency)
+  .forEach((word) => console.info(word));
+console.info("Top 3 words:");
+frequenciesArray
+  .slice(0, 3)
+  .forEach((word) => console.info(word.word + " " + word.frequency));
 //console.info(words);
 
 // console.info(canDrive(15, "France"));
