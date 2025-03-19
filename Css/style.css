@@ -9,3 +9,16 @@
 body{
     background-color: #f7f7f7;
     }
+
+    input{
+        padding: 0.2rem;
+        border: 2px solid #ccc;
+        border-radius: 0.2rem;
+        margin: 0 1rem;
+    }
+    input:invalid{
+        border:2px solid red;
+    }
+    input:valid{
+        border:2px solid green;
+    }
