@@ -39,17 +39,11 @@ students
 const message =
   "Le chat noir regarde le chien! Le chat blanc observe le jardin; le chat gris surveille le chien pendant que le jardin fleurit, car le jardin est magnifique quand le soleil brille sur le chat noir.";
 
+
 const words = message
   .toLowerCase()
   .trim()
-  .replaceAll(".", " ")
-  .replaceAll(",", " ")
-  .replaceAll(";", " ")
-  .replaceAll("?", " ")
-  .replaceAll("!", " ")
-  .replaceAll(":", " ")
-  .replaceAll('"', " ")
-  .replaceAll("'", " ")
+  .replaceAll(/[.,:;!?"']/g, " ")
   .split(" ");
 const frequency = {};
 const frequenciesArray = [];
